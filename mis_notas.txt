@@ -1,1 +1,14 @@
 DESCARGATE POSTMAN
+bueno ahora, Postman soy yo , el usuario, que le da instrucciones a la secretaria.
+Tú (en Postman) escribes los datos del nuevo usuario/producto en un "formulario" (el Body en JSON) y le dices a la "secretaria" (tu API Express): "¡Secretaria, por favor, crea un nuevo registro con estos datos!"
+Tu API Express (la secretaria) recibe esa instrucción. Mira sus reglas (tu createProduct o createUser en los controllers).
+
+Tu controlador (createProduct o createUser) le dice a Sequelize: "Sequelize, traduce esto al lenguaje de la base de datos y guarda estos datos en la tabla Products (o Users) del archivador."
+
+Sequelize (el traductor/mensajero) toma tus datos, los convierte en una instrucción SQL de "INSERTAR", y se los envía al archivador (tu base de datos MySQL).
+
+MySQL inserta una nueva fila de datos (un registro) en la tabla correspondiente.
+
+MySQL le confirma a Sequelize que lo guardó. Sequelize le confirma a tu controlador. Tu controlador le confirma a Express. Express le confirma a Postman.
+
+Postman te muestra la confirmación: "¡Registro creado con éxito!" (status 201 y los datos del registro).
