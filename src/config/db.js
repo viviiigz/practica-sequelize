@@ -1,4 +1,7 @@
 import sequelize from "./database.js";
+import Product from "../models/product.js";
+import User from "../models/user.js";
+
 
 const initDB= async () => {
   try {
